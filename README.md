@@ -6,9 +6,9 @@ This git repository helps you to send emails quickly and easily through SendGrid
 Create an SendGrid account at http://sendgrid.com/pricing.html
 
 Clone SendGrid application on your local machine
-<pre>
+
     git clone https://github.com/sendgrid/sendgrid-python-django-sample-app.git
-</pre>
+
 
 ###Install SendGrid library###
 
@@ -19,9 +19,9 @@ Clone SendGrid application on your local machine
 Configure `SGapp/views.rb` file with your information:
 
 Update the *&lt;sendgrid_username&gt;* and *&lt;sendgrid_password&gt;* with your SendGrid credentials.
-```python
+
     sg = sendgrid.SendGridClient('<sendgrid_username>', '<sendgrid_password>')
-```
+
 
 ###Start python server ###
 
