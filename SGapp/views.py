@@ -11,7 +11,6 @@ def index(request):
 
         form = MailForm(request.POST)
         if form.is_valid():
-            
             to_mail = str(form.cleaned_data['to_mail'])
             subject_mail = str(form.cleaned_data['subject_mail'])
             content_mail = str(form.cleaned_data['content_mail'])

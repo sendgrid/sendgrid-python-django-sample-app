@@ -3,7 +3,7 @@ SendGrid Python Django Sample App
 
 This git repository helps you to send emails quickly and easily through SendGrid using Python and Django.
 
-Create an SendGrid account at http://sendgrid.com/pricing.html
+Create an SendGrid account at http://sendgrid.com/transactional-email/pricing
 
 Clone SendGrid application on your local machine
 
@@ -29,4 +29,8 @@ Start python server
     # or
     python manage.py runserver 0.0.0.0:8000
     
+Open application in your browser http://localhost:8000/
+
+
+
 For more information you can visit our [Python Library](https://github.com/sendgrid/sendgrid-python)

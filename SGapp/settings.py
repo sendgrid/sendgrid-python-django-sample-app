@@ -88,6 +88,6 @@ USE_TZ = True
 
 STATIC_URL = '/SGapp/static/'
 
-
+# please replace "<sendgrid_username>" and "<sendgrid_password>" with your SendGrid credentials
 SENDGRID_USERNAME = '<sendgrid_username>';
 SENDGRID_PASSWORD = '<sendgrid_password>';
