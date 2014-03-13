@@ -16,11 +16,12 @@ Clone SendGrid application on your local machine
 
 ###Configuration###
 
-Configure `SGapp/views.rb` file with your information:
+Configure `SGapp/settings.py` file with your information:
 
 Update the *&lt;sendgrid_username&gt;* and *&lt;sendgrid_password&gt;* with your SendGrid credentials.
 
-    sg = sendgrid.SendGridClient('<sendgrid_username>', '<sendgrid_password>')
+    SENDGRID_USERNAME = '<sendgrid_username>';
+    SENDGRID_PASSWORD = '<sendgrid_password>';
 
 
 ###Start python server ###

@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponseRedirect
 from django.contrib import messages
+from django.conf import settings
 
 from SGapp.form import MailForm
 import sendgrid
@@ -15,7 +16,7 @@ def index(request):
             subject_mail = str(form.cleaned_data['subject_mail'])
             content_mail = str(form.cleaned_data['content_mail'])
 
-            sg = sendgrid.SendGridClient('<sendgrid_username>', '<sendgrid_password>')
+            sg = sendgrid.SendGridClient(settings.SENDGRID_USERNAME, settings.SENDGRID_PASSWORD)
 
             message = sendgrid.Mail()
             message.add_to(to_mail)
