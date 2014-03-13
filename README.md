@@ -29,8 +29,8 @@ Start python server
     # or
     python manage.py runserver 0.0.0.0:8000
     
-Open application in your browser http://localhost:8000/
-
+Open the sample application in your browser http://localhost:8000/
+![Screenshot](SGapp/static/screenshot.png)
 
 
 For more information you can visit our [Python Library](https://github.com/sendgrid/sendgrid-python)
