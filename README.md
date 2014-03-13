@@ -10,11 +10,11 @@ Clone SendGrid application on your local machine
     git clone https://github.com/sendgrid/sendgrid-python-django-sample-app.git
 
 
-###Install SendGrid library###
+###Configuration###
+
+Install SendGrid library
 
     pip install sendgrid==0.3.1
-
-###Configuration###
 
 Configure `SGapp/settings.py` file with your information:
 
@@ -23,8 +23,7 @@ Update the *&lt;sendgrid_username&gt;* and *&lt;sendgrid_password&gt;* with your
     SENDGRID_USERNAME = '<sendgrid_username>';
     SENDGRID_PASSWORD = '<sendgrid_password>';
 
-
-###Start python server ###
+Start python server
 
     python manage.py runserver
     # or
