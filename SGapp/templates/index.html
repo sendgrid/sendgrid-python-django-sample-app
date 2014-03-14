@@ -1,0 +1,45 @@
+{% load staticfiles %}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>We Make Email Delivery Easy | SendGrid</title>
+    <link type="text/css" rel="stylesheet" href="{% static "main.css" %}"/>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header-top">
+        <img src="{% static "sendgrid_logo.png" %}" style="width: 150px;" />
+      </div>
+    </div>
+    <div class="content">
+      <div class="form">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{% if message.tags %}{{ message.tags }}{% endif %}">
+              <ul class="messages">
+                <li>{{ message }}</li>
+              </ul>
+            </div>
+          {% endfor %}
+        {% endif %}
+
+        {% if form.errors %}
+          <div class="alert alert-error">
+            {% for key, error in form.errors.items %}
+              {{ error }}
+            {% endfor %}
+          </div>
+        {% endif %}
+        
+        <form action="/" method="post">{% csrf_token %}
+          <div class="form-input"><label>To:</label> {{ form.to_mail }}</div>
+          <div class="form-input"><label>Subject: </label>{{ form.subject_mail }}</div>
+          <div class="form-input"><label>Content: </label>{{ form.content_mail }}</div>
+          <div><input type="submit" value="Send" class="buttton" /></div>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
